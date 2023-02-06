@@ -11,6 +11,7 @@
    
 3.Create new file in models -> super-hero.ts  
 * Create the model class
+
 4.Create a new service inside services folder -> super-hero:  
 * Define the methods inside service
 5.Inject Service inside constructor of app.component.ts  
