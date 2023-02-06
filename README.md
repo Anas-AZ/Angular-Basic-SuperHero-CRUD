@@ -60,7 +60,7 @@ public getSuperHeroes(): Observable<SuperHero[]>
 builder.Services.AddCors( options => options.AddPolicy(name: "SuperHeroOrigins",
 policy =>
 {
-policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+   policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 }));
 ```
 
@@ -71,6 +71,10 @@ policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 ### Add Entity Framework Core
 
 1.Install EF Core packages 
+* EntityFrameworkCore
+* EntityFrameworkCore.Tools
+* EntityFrameworkCore.Design
+* Npgsql.EntityFrameworkCore.PostgreSQL
 
 2.Add new folder -> Data 
 
@@ -83,7 +87,8 @@ policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 6.Add Connection string in appsettings  
 ```cs
 builder.Services.AddDbContext<DataContext>(options =>
-{	     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+{
+   options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 }); 
 ```
 
