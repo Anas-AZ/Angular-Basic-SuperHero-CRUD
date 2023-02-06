@@ -1,0 +1,28 @@
+<div class=" w-50" *ngIf="hero">
+  <h2>{{hero.name}}</h2>
+  <div class="input-group mb-3">
+    <span class="input-group-text">Name</span>
+    <input class="form-control" [(ngModel)]="hero.name" placeholder="Name">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text"> First Name</span>
+    <input  class="form-control" [(ngModel)]="hero.firstName" placeholder="First Name">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Last Name</span>
+    <input class="form-control" [(ngModel)]="hero.lastName" placeholder="Last Name">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Place</span>
+    <input class="form-control" [(ngModel)]="hero.place" placeholder="Place">
+  </div>
+
+<button class="btn btn-secondary me-1" (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
+<button  class="btn btn-secondary" (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button>
+<button class="btn btn-secondary" (click)="createHero(hero)" *ngIf="!hero.id">Create</button>
+
+
+</div>
