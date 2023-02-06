@@ -2,7 +2,8 @@
 
 ### Front
 
-1.Create angular application.  
+1.Create angular application.
+
 2.Create 3 folders:  
 * components  
 * models  
@@ -14,25 +15,32 @@
 
 4.Create a new service inside services folder -> super-hero:  
 * Define the methods inside service
+
 5.Inject Service inside constructor of app.component.ts  
 * Call the method from service inside ngOnInit by assigning it to a variable declared inside the ts file.
+
 6.Design the html page  
 
 ### Back
 
-1.Create .net core web api  
-2.Create the data model class  
+1.Create .net core web api
+
+2.Create the data model class
+
 3.Create an empty api controller inside controllers folder  
 * Define the Get method inside the controller
 
 ### Front
 
-1.Add  a`piUrl: "https://localhost:7196/api/"` inside environment .ts  
-2.Add  `url = "SuperHero"; [url = “controllerName]` inside class in service.ts  
+1.Add  a`piUrl: "https://localhost:7196/api/"` inside environment .ts
+
+2.Add  `url = "SuperHero"; [url = “controllerName]` inside class in service.ts
+
 3.Add ‘HttpClientModule’ to imports array in app.module.ts   
 * add the import statement - `import {HttpClientModule} from '@angular/common/http';`
  
-4.Inject HttpClient inside constructor in the service  
+4.Inject HttpClient inside constructor in the service
+
 5.Modify get method in service  
 
 ```ts
@@ -62,11 +70,16 @@ policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 
 ### Add Entity Framework Core
 
-1.Install EF Core packages  
-2.Add new folder -> Data  
-3.Add new class  -> DataContext  
-4.Add dbcontext in the class  
-5.Add DbContext in program.cs  
+1.Install EF Core packages 
+
+2.Add new folder -> Data 
+
+3.Add new class  -> DataContext
+
+4.Add dbcontext in the class 
+
+5.Add DbContext in program.cs
+
 6.Add Connection string in appsettings  
 ```cs
 builder.Services.AddDbContext<DataContext>(options =>
@@ -83,6 +96,7 @@ Use the following commands:
 ### Getting data from the database
 1.Create a constructor in the controller  
 * Inject data context into the constructor
+
 2.Change the http get method to return an Ok object.
 
 ### CRUD
@@ -102,8 +116,10 @@ Use the following commands:
 
 ### Creating Edit Form in the Frontend
 
-1.Import the Forms module and add it to imports in app.module.ts  
-2.Update html to add forms and the necessary bindings.  
+1.Import the Forms module and add it to imports in app.module.ts 
+
+2.Update html to add forms and the necessary bindings
+
 3.Use the Input and Output events to have cross component communication.  
 
 ### Coupling Form with backend
