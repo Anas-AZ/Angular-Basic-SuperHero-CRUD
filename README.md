@@ -6,7 +6,9 @@
 2.Create 3 folders:  
 * components  
 * models  
-* services  
+* services
+
+   
 3.Create new file in models -> super-hero.ts  
 * Create the model class
 4.Create a new service inside services folder -> super-hero:  
@@ -28,6 +30,7 @@
 2.Add  `url = "SuperHero"; [url = “controllerName]` inside class in service.ts  
 3.Add ‘HttpClientModule’ to imports array in app.module.ts   
 * add the import statement - `import {HttpClientModule} from '@angular/common/http';`
+ 
 4.Inject HttpClient inside constructor in the service  
 5.Modify get method in service  
 
