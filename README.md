@@ -2,7 +2,7 @@
 
 ### Front
 
-1.Create angular application.
+1.Create angular application.  
 2.Create 3 folders:
 components
 models
