@@ -24,10 +24,10 @@ Define the Get method inside the controller
 
 ### Front
 
-1.Add  apiUrl: "https://localhost:7196/api/" inside environment .ts
-2.Add  url = "SuperHero"; [url = “controllerName] inside class in service.ts
+1.Add  a`piUrl: "https://localhost:7196/api/"` inside environment .ts
+2.Add  `url = "SuperHero"; [url = “controllerName]` inside class in service.ts
 3.Add ‘HttpClientModule’ to imports array in app.module.ts 
-add the import statement - import {HttpClientModule} from '@angular/common/http';
+add the import statement - `import {HttpClientModule} from '@angular/common/http';`
 4.Inject HttpClient inside constructor in the service
 5.Modify get method in service
 
@@ -44,11 +44,13 @@ public getSuperHeroes(): Observable<SuperHero[]>
 
 1.Add cors
 
+```cs
 builder.Services.AddCors( options => options.AddPolicy(name: "SuperHeroOrigins",
 policy =>
 {
 policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 }));
+```
 
 2.Use Cors
 
@@ -62,9 +64,11 @@ policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 4.Add dbcontext in the class
 5.Add DbContext in program.cs
 6.Add Connection string in appsettings
+```cs
 builder.Services.AddDbContext<DataContext>(options =>
 {	     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 }); 
+```
 
 ### To Create a new Database:
 Tools -> NuGet package manager -> package manager console
