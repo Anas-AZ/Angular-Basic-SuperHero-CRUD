@@ -110,6 +110,8 @@ Use the following commands:
 * Add the newly created object to the db
 * Return the database objects as a list
 
+> Inorder to receive the request data properly, we need to maintain the same names for the model properties in the web api and models in angular.
+
 
 2.Define the put method  
 * Find the object with the same id as of the object passed as parameter
