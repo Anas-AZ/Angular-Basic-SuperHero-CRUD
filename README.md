@@ -32,7 +32,7 @@
 
 ### Front
 
-1.Add  a`piUrl: "https://localhost:7196/api/"` inside environment .ts
+1.Add  `apiUrl: "https://localhost:7196/api/"` inside environment .ts
 
 2.Add  `url = "SuperHero"; [url = “controllerName]` inside class in service.ts
 
